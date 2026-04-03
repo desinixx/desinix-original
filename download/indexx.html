@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Desinix App | Experience Design on the Go</title>
+    
+    <meta name="description" content="Download the Desinix official Android app to manage your website and poster projects directly from your mobile device. Fast, secure, and built for impact.">
+    <meta name="author" content="Desinix">
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #14b8a6 100%);
+        }
+        @keyframes bounce-subtle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        .animate-bounce-subtle {
+            animation: bounce-subtle 2s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <a href="index.html" class="text-2xl font-extrabold text-teal-600 hover:text-teal-700 transition duration-300">
+                Desin<span class="text-gray-900">ix</span>
+            </a>
+
+            <nav id="desktop-menu" class="hidden md:flex space-x-8">
+                <a href="https://desinix.co.in" class="text-gray-600 hover:text-teal-600 font-medium transition duration-300">Home</a>
+                <a href="https://desinix.co.in#websites" class="text-gray-600 hover:text-teal-600 font-medium transition duration-300">Websites</a>
+                <a href="https://desinix.co.in#posters" class="text-gray-600 hover:text-teal-600 font-medium transition duration-300">Posters</a>
+                <a href="/contact/" class="text-gray-600 hover:text-teal-600 font-medium transition duration-300">Contact</a>
+                <a href="/about/" class="text-gray-600 hover:text-teal-600 font-medium transition duration-300">AboutUs</a>
+            </nav>
+
+            <a href="https://desinix.co.in/contact/#contact-form" class="hidden md:inline-flex px-4 py-2 text-sm font-semibold text-white bg-teal-600 rounded-full shadow-lg hover:bg-teal-700 transition duration-300 transform hover:scale-105">
+                Start Your Project
+            </a>
+
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-600 hover:text-teal-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="https://desinix.co.in/#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50">Home</a>
+            <a href="https://desinix.co.in/#websites" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50">Websites</a>
+            <a href="https://desinix.co.in/#posters" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50">Posters</a>
+            <a href="https://desinix.co.in/#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50">Contact</a>
+            <a href="/about/" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50">AboutUs</a>
+        </div>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero-bg py-24 sm:py-32 text-white">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+
+        <h1 class="text-4xl sm:text-6xl font-extrabold mb-6">
+            Desinix in Your <span class="text-yellow-300">Pocket</span>
+        </h1>
+
+        <p class="text-xl sm:text-2xl text-teal-100 max-w-2xl mx-auto mb-10">
+            Get the official Desinix Android application. Experience seamless project management and design updates anywhere, anytime.
+        </p>
+
+        <!-- ✅ ONLY CHANGE HERE -->
+        <div class="flex flex-col items-center gap-4">
+            <a href="/app-release.apk" download="desinix-app.apk"
+               class="animate-bounce-subtle inline-flex items-center justify-center px-10 py-5 border border-transparent text-lg font-bold rounded-full shadow-2xl text-gray-900 bg-yellow-300 hover:bg-yellow-400 transition duration-300 transform hover:scale-105">
+                      <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17.523 15.3414C17.0211 15.3414 16.6144 14.9347 16.6144 14.4328C16.6144 13.9308 17.0211 13.5242 17.523 13.5242C18.025 13.5242 18.4317 13.9308 18.4317 14.4328C18.4317 14.9347 18.025 15.3414 17.523 15.3414ZM6.47702 15.3414C5.97505 15.3414 5.56836 14.9347 5.56836 14.4328C5.56836 13.9308 5.97505 13.5242 6.47702 13.5242C6.97899 13.5242 7.38568 13.9308 7.38568 14.4328C7.38568 14.9347 6.97899 15.3414 6.47702 15.3414ZM17.8574 11.2065L19.9575 7.57002C20.103 7.31806 20.0163 6.99507 19.7643 6.84956C19.5123 6.70405 19.1893 6.79074 19.0438 7.04271L16.8837 10.7839C15.4673 10.1347 13.8065 9.77344 12 9.77344C10.1935 9.77344 8.53272 10.1347 7.11627 10.7839L4.95622 7.04271C4.81071 6.79074 4.48773 6.70405 4.23576 6.84956C3.98379 6.99507 3.8971 7.31806 4.0426 7.57002L6.14264 11.2065C3.39174 12.6953 1.54718 15.5415 1.45523 18.8413H22.5448C22.4528 15.5415 20.6083 12.6953 17.8574 11.2065Z"/>
+                    </svg>
+               android app download
+            </a>
+            <p class="text-sm text-teal-200 mt-2">Latest Version: 1.0.4 | Size: 12MB</p>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-gray-900 py-12">
+    <div class="max-w-7xl mx-auto px-4 text-center text-gray-400">
+        &copy; 2026 Desinix. All rights reserved. Built with passion.
+    </div>
+</footer>
+
+<script>
+    const button = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+    if (button && menu) {
+        button.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    }
+</script>
+
+</body>
+</html>
