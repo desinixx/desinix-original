@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Branding Intake Form</title>
+     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font Family -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles to ensure the form container is centered and uses the theme font */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9; /* Light Slate background for professionalism */
+        }
+        /* Style for the success message */
+        #msg {
+            display: none;
+            transition: all 0.3s ease-in-out;
+        }
+        /* Custom styling for inputs to maintain professionalism and consistent focus */
+        input:focus, textarea:focus, select:focus {
+            border-color: #0d9488; /* Teal-700 on focus */
+            box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.2); /* Soft focus ring */
+        }
+        /* Enhanced Fieldset Styling for clear separation */
+        fieldset {
+            transition: box-shadow 0.3s ease;
+        }
+        fieldset:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 p-4 sm:p-8 min-h-screen flex items-center justify-center">
+
+    <!-- Main Container: Wider and more defined shadow -->
+    <div class="w-full max-w-5xl bg-white shadow-2xl rounded-3xl p-6 sm:p-12 border border-gray-100">
+        <header class="mb-10 text-center">
+            <h1 class="text-4xl font-extrabold text-gray-900 sm:text-5xl">
+                <span class="text-teal-700">Personal Branding</span> Intake Form
+            </h1>
+            <p class="mt-3 text-lg text-gray-500">
+                Please provide detailed information for your branding and program design.
+            </p>
+        </header>
+
+        <!-- Message/Alert Area -->
+        <div id="msg" class="p-4 rounded-xl text-sm font-medium mb-8 transition duration-300 ease-in-out shadow-md" role="alert">
+            <!-- Message content will appear here -->
+        </div>
+        
+        <form id="brandingForm" class="space-y-10">
+            
+            <!-- SECTION 1: Brand & Personal Info -->
+            <fieldset class="border border-gray-200 rounded-2xl p-6 sm:p-8 bg-gray-50 shadow-inner">
+                <legend class="text-xl font-bold text-gray-700 px-3 ml-2">1. Brand & Personal Details</legend>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                    <!-- Brand Name -->
+                    <div>
+                        <label for="brandName" class="block text-sm font-medium text-gray-700 mb-1">Brand Name <span class="text-red-500">*</span></label>
+                        <input type="text" id="brandName" name="brandName" required class="w-full p-3 border border-gray-300 rounded-lg shadow-sm">
+                    </div>
+                    <!-- Tagline -->
+                    <div>
+                        <label for="tagline" class="block text-sm font-medium text-gray-700 mb-1">Tagline / Slogan</label>
+                        <input type="text" id="tagline" name="tagline" class="w-full p-3 border border-gray-300 rounded-lg shadow-sm">
+                    </div>
+                    <!-- Full Name -->
+                    <div>
+                        <label for="fullName" class="block text-sm font-medium text-gray-700 mb-1">Your Full Name <span class="text-red-500">*</span></label>
+                        <input type="text" id="fullName" name="fullName" required class="w-full p-3 border border-gray-300 rounded-lg shadow-sm">
+                    </div>
+                    <!-- Age -->
+                    <div>
+                        <label for="age" class="block text-sm font-medium text-gray-700 mb-1">Age (Optional)</label>
+                        <input type="number" id="age" name="age" class="w-full p-3 border border-gray-300 rounded-lg shadow-sm">
+                    </div>
+                </div>
+                <!-- About Person -->
+                <div class="mt-6">
+                    <label for="aboutPerson" class="block text-sm font-medium text-gray-700 mb-1">Tell us about yourself / your expertise (Max 300 words) <span class="text-red-500">*</span></label>
+                    <textarea id="aboutPerson" name="aboutPerson" rows="4" required class="w-full p-3 border border-gray-300 rounded-lg shadow-sm"></textarea>
+                </div>
+                <!-- Mission -->
+                <div class="mt-6">
+                    <label for="mission" class="block text-sm font-medium text-gray-700 mb-1">What is your brand's core mission? <span class="text-red-500">*</span></label>
+                    <textarea id="mission" name="mission" rows="3" required class="w-full p-3 border border-gray-300 rounded-lg shadow-sm"></textarea>
+                </div>
+                <!-- Target Audience -->
+                <div class="mt-6">
+                    <label for="targetAudience" class="block text-sm font-medium text-gray-700 mb-1">Describe your Target Audience (Demographics, Pain Points, Goals) <span class="text-red-500">*</span></label>
+                    <textarea id="targetAudience" name="targetAudience" rows="3" required class="w-full p-3 border border-gray-300 rounded-lg shadow-sm"></textarea>
+                </div>
+            </fieldset>
+
+            <!-- SECTION 2: Program Details -->
+            <fieldset class="border border-gray-200 rounded-2xl p-6 sm:p-8 bg-gray-50 shadow-inner">
+                <legend class="text-xl font-bold text-gray-700 px-3 ml-2">2. Program/Service Details</legend>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                    <!-- Program Name -->
+                    <div>
+                        <label for="programName" class="block text-sm font-medium text-gray-700 mb-1">Name of the Program/Service <span class="text-red-500">*</span></label>
+                        <input type="text" id="programName" name="programName" required class="w-full p-3 border border-gray-300 rounded-lg shadow-sm">
+                    </div>
+                    <!-- Program Duration -->
+                    <div>
+                        <label for="programDuration" class="block text-sm font-medium text-gray-700 mb-1">Duration (e.g., 6 Weeks, 3 Months, One-time)</label>
+                        <input type="text" id="programDuration" name="programDuration" class="w-full p-3 border border-gray-300 rounded-lg shadow-sm">
+                    </div>
+                    <!-- Program Price -->
+                    <div>
+                        <label for="programPrice" class="block text-sm font-medium text-gray-700 mb-1">Price / Fee (Optional)</label>
+                        <input type="text" id="programPrice" name="programPrice" class="w-full p-3 border border-gray-300 rounded-lg shadow-sm">
+                    </div>
+                    <!-- Schedule Format -->
+                    <div>
+                        <label for="scheduleFormat" class="block text-sm font-medium text-gray-700 mb-1">Schedule Format (e.g., Live Sessions, Self-Paced, 1:1 Calls)</label>
+                        <input type="text" id="scheduleFormat" name="scheduleFormat" class="w-full p-3 border border-gray-300 rounded-lg shadow-sm">
+                    </div>
+                </div>
+                <!-- Program Description -->
+                <div class="mt-6">
+                    <label for="programDescription" class="block text-sm font-medium text-gray-700 mb-1">Detailed Program Description (What is it, what is the outcome) <span class="text-red-500">*</span></label>
+                    <textarea id="programDescription" name="programDescription" rows="4" required class="w-full p-3 border border-gray-300 rounded-lg shadow-sm"></textarea>
+                </div>
+                <!-- What's Inside -->
+                <div class="mt-6">
+                    <label for="whatsInside" class="block text-sm font-medium text-gray-700 mb-1">What exactly is included? (Modules, Resources, Support, etc.) <span class="text-red-500">*</span></label>
+                    <textarea id="whatsInside" name="whatsInside" rows="4" required class="w-full p-3 border border-gray-300 rounded-lg shadow-sm"></textarea>
+                </div>
+                <!-- Community Platform -->
+                <div class="mt-6">
+                    <label for="communityPlatform" class="block text-sm font-medium text-gray-700 mb-1">Community Platform (e.g., WhatsApp, Telegram, Discord, None)</label>
+                    <input type="text" id="communityPlatform" name="communityPlatform" class="w-full p-3 border border-gray-300 rounded-lg shadow-sm">
+                </div>
+                <!-- How to Join -->
+                <div class="mt-6">
+                    <label for="howToJoin" class="block text-sm font-medium text-gray-700 mb-1">How can people join the program? (Link, DM on Instagram, etc.)</label>
+                    <input type="url" id="howToJoin" name="howToJoin" placeholder="e.g., https://link.com/enroll" class="w-full p-3 border border-gray-300 rounded-lg shadow-sm">
+                </div>
+            </fieldset>
+            
+            <!-- SECTION 3: Visual & Design Preferences (Single Image Upload) -->
+            <fieldset class="border border-gray-200 rounded-2xl p-6 sm:p-8 bg-gray-50 shadow-inner">
+                <legend class="text-xl font-bold text-gray-700 px-3 ml-2">3. Visual & Contact Details</legend>
+
+                <div class="mt-4 space-y-4">
+                    <p class="text-sm text-gray-600 font-semibold text-teal-800">
+                        **Image Upload:** Select up to 3 files. The first file will be the **Brand Logo**, the second the **Profile Picture**, and the third the **Design Reference Image**.
+                    </p>
+
+                    <!-- Hidden multi-file input -->
+                    <input type="file" id="allImages" name="allImages" accept="image/*" multiple class="hidden">
+
+                    <!-- Single Visible Button/Zone -->
+                    <div class="relative">
+                        <button type="button" id="uploadButton" class="w-full flex items-center justify-center py-4 px-6 border-2 border-dashed border-teal-300 rounded-xl bg-teal-50 text-teal-700 hover:bg-teal-100 transition duration-200 shadow-md font-bold">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 mr-3">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
+                            </svg>
+                            Upload All Images (Logo, Profile, Reference)
+                        </button>
+                        <div id="imageStatusArea" class="mt-3 space-y-2 text-sm p-3 border border-gray-200 rounded-lg bg-white shadow-inner">
+                            <p class="text-gray-500 italic">No files selected yet.</p>
+                        </div>
+                    </div>
+
+                    <!-- Hidden URL fields (Kept for Apps Script compatibility) -->
+                    <input type="hidden" id="brandLogoURL" name="brandLogoURL">
+                    <input type="hidden" id="profilePictureURL" name="profilePictureURL">
+                    <input type="hidden" id="exampleImageURL" name="exampleImageURL">
+                </div>
+                
+                <!-- SECTION FOR 3+ IMAGES -->
+                <div class="mt-8 pt-6 border-t border-gray-200">
+                    <p class="text-lg font-bold text-gray-700 mb-3">
+                        Submitting More Than 3 Images
+                    </p>
+                   <p class="text-gray-600 mb-4">
+  If you have more than three image files to submit, please use the button below to email them directly to 
+  <span class="font-semibold" style="color: #0d9488;">support@desinix.co.in</span> with the required 
+  <span class="font-semibold" style="color: #0d9488;">Subject: #image</span>.
+</p>
+
+                    <!-- Mailto button: professional and uses Indigo color for distinction -->
+                 <a href="mailto:support@desinix.co.in?subject=%23image&body=Please%20find%20the%20additional%20images%20for%20the%20branding%20intake%20form%20attached%20herewith."
+   id="emailButton"
+   class="inline-flex items-center justify-center w-full py-3 px-6 border border-transparent rounded-lg shadow-lg text-base font-semibold text-white transition duration-300 transform hover:scale-[1.005] active:scale-[0.99]"
+   style="background-color: #0d9488;"
+>
+  <svg xmlns="http://www.w3.org/2000/svg"
+       fill="none"
+       viewBox="0 0 24 24"
+       stroke-width="2"
+       stroke="currentColor"
+       class="w-5 h-5 mr-3">
+    <path stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.903l-7.44 4.167a3.75 3.75 0 0 1-4.12 0L3.29 8.903A2.25 2.25 0 0 1 2.25 6.993V6.75" />
+  </svg>
+
+  Email Additional Images (Subject: #image)
+</a>
+
+                </div>
+                <!-- END NEW SECTION -->
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                    <!-- Design Style -->
+                    <div>
+                        <label for="designStyle" class="block text-sm font-medium text-gray-700 mb-1">Preferred Design Style (e.g., Minimalist, Bold, Modern, Traditional)</label>
+                        <input type="text" id="designStyle" name="designStyle" class="w-full p-3 border border-gray-300 rounded-lg shadow-sm">
+                    </div>
+                    <!-- Color Preference -->
+                    <div>
+                        <label for="colorPreference" class="block text-sm font-medium text-gray-700 mb-1">Primary Color Preference (e.g., #00A388, Blue, Black/White)</label>
+                        <input type="text" id="colorPreference" name="colorPreference" class="w-full p-3 border border-gray-300 rounded-lg shadow-sm">
+                    </div>
+                </div>
+
+                <div class="mt-6">
+                    <label for="extraNotes" class="block text-sm font-medium text-gray-700 mb-1">Extra Notes / Specific Requests for the Designer</label>
+                    <textarea id="extraNotes" name="extraNotes" rows="3" class="w-full p-3 border border-gray-300 rounded-lg shadow-sm"></textarea>
+                </div>
+            </fieldset>
+
+            <!-- SECTION 4: Contact & Social Media -->
+            <fieldset class="border border-gray-200 rounded-2xl p-6 sm:p-8 bg-gray-50 shadow-inner">
+                <legend class="text-xl font-bold text-gray-700 px-3 ml-2">4. Contact Information</legend>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                    <!-- Contact Email -->
+                    <div>
+                        <label for="contactEmail" class="block text-sm font-medium text-gray-700 mb-1">Contact Email <span class="text-red-500">*</span></label>
+                        <input type="email" id="contactEmail" name="contactEmail" required class="w-full p-3 border border-gray-300 rounded-lg shadow-sm">
+                    </div>
+                    <!-- WhatsApp -->
+                    <div>
+                        <label for="whatsapp" class="block text-sm font-medium text-gray-700 mb-1">WhatsApp Number (with country code)</label>
+                        <input type="tel" id="whatsapp" name="whatsapp" placeholder="+91 99999 99999" class="w-full p-3 border border-gray-300 rounded-lg shadow-sm">
+                    </div>
+                    <!-- Instagram -->
+                    <div>
+                        <label for="instagram" class="block text-sm font-medium text-gray-700 mb-1">Instagram Link/Username</label>
+                        <input type="text" id="instagram" name="instagram" placeholder="@yourhandle" class="w-full p-3 border border-gray-300 rounded-lg shadow-sm">
+                    </div>
+                    <!-- Other Social -->
+                    <div>
+                        <label for="otherSocial" class="block text-sm font-medium text-gray-700 mb-1">Other Social Media Links (e.g., LinkedIn, YouTube)</label>
+                        <input type="text" id="otherSocial" name="otherSocial" class="w-full p-3 border border-gray-300 rounded-lg shadow-sm">
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Submit Button (Enhanced Hover/Active effect) -->
+            <div class="pt-6">
+                <button type="submit" id="submitButton" class="w-full flex justify-center items-center py-4 px-8 border border-transparent rounded-xl shadow-xl text-xl font-bold text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-4 focus:ring-offset-2 focus:ring-teal-500 transition duration-300 ease-in-out transform hover:scale-[1.005] active:scale-[0.99] active:shadow-lg">
+                    Submit Details
+                </button>
+            </div>
+        </form>
+
+    </div>
+
+<script>
+
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz4giQk9pfkxsWcQR-dosH0IP_esK1JcUf8KhOmeAkhB33a6v1IJT14MGuR8Z3RRT0BZw/exec'; 
+
+    // ImgBB API Key
+    const IMGBB_API_KEY = "ee919fb9745677cafe5942124aaf932c";
+    
+    // Elements
+    const form = document.getElementById('brandingForm');
+    const submitButton = document.getElementById('submitButton');
+    const msg = document.getElementById('msg');
+    
+    // Elements for single upload
+    const allImagesInput = document.getElementById('allImages');
+    const uploadButton = document.getElementById('uploadButton');
+    const imageStatusArea = document.getElementById('imageStatusArea');
+
+    // MAPPING for the sequentially uploaded files (max 3 files are accepted)
+    const fileMapping = [
+        { urlInput: document.getElementById('brandLogoURL'), name: 'Brand Logo', file: null, statusEl: null },
+        { urlInput: document.getElementById('profilePictureURL'), name: 'Profile Picture', file: null, statusEl: null },
+        { urlInput: document.getElementById('exampleImageURL'), name: 'Design Reference Image', file: null, statusEl: null }
+    ];
+
+    /**
+     * Resets the status area and the hidden file data.
+     */
+    function resetImageStatus() {
+        imageStatusArea.innerHTML = '<p class="text-gray-500 italic">No files selected yet.</p>';
+        fileMapping.forEach(m => {
+            m.file = null;
+            m.statusEl = null;
+            m.urlInput.value = '';
+        });
+    }
+
+    // Click handler for the visible button to trigger the hidden file input
+    uploadButton.addEventListener('click', () => {
+        allImagesInput.click();
+    });
+
+    // Change handler for the hidden file input when files are selected
+    allImagesInput.addEventListener('change', async function() {
+        const files = Array.from(this.files);
+        resetImageStatus(); // Clear previous statuses and data
+
+        if (files.length === 0) {
+            return;
+        }
+        
+        // Use the first three files selected (max 3)
+        const filesToProcess = files.slice(0, 3);
+        
+        // Inform user if too many/too few files were selected
+        if (files.length > 3) {
+            imageStatusArea.innerHTML += `<p class="text-red-700 font-medium bg-red-100 p-2 rounded-lg mb-2">
+                ⚠️ **MAXIMUM 3 FILES UPLOADED:** Only the first 3 files will be used (Logo, Profile, Reference).
+                If you have more, please use the email link below.
+            </p>`;
+        }
+        if (files.length < 3) {
+             imageStatusArea.innerHTML += `<p class="text-yellow-700 font-medium bg-yellow-100 p-2 rounded-lg mb-2">
+                ⚠️ Only ${files.length} file(s) selected. Please select all three images if available.
+            </p>`;
+        }
+        
+        // Loop through the selected files and prepare the mapping
+        for (let i = 0; i < filesToProcess.length; i++) {
+            const file = filesToProcess[i];
+            const map = fileMapping[i];
+            
+            // 1. Create a dedicated status element for this file
+            const statusEl = document.createElement('p');
+            statusEl.id = `status-${map.name.replace(/\s/g, '-')}`;
+            statusEl.className = 'text-gray-700 flex justify-between';
+            statusEl.innerHTML = `<span class="font-semibold">${map.name}</span> 
+                                  <span class="text-blue-600">(${file.name}) Ready for submission.</span>`;
+            imageStatusArea.appendChild(statusEl);
+
+            // 2. Attach the file and status element to the mapping object
+            map.file = file;
+            map.statusEl = statusEl;
+        }
+    });
+
+
+    /**
+     * Converts a File object to its Base64 string representation.
+     * @param {File} file 
+     * @returns {Promise<string>} Base64 string of the file.
+     */
+    function fileToBase64(file) {
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = () => {
+                // The result is in the format "data:image/png;base64,iVBORw0..."
+                // We only need the base64 part after the comma.
+                const base64String = reader.result.split(',')[1];
+                resolve(base64String);
+            };
+            reader.onerror = error => reject(error);
+        });
+    }
+
+    /**
+     * Uploads a single image to ImgBB and returns the URL.
+     * @param {File} file 
+     * @param {HTMLElement} statusEl The element to show status messages.
+     * @returns {Promise<string|null>} The URL of the uploaded image or null on failure.
+     */
+    async function uploadImageToImgBB(file, statusEl) {
+        if (!file) return null;
+
+        const originalText = statusEl.innerHTML;
+        statusEl.innerHTML = `<span class="font-semibold">${fileMapping.find(m => m.file === file).name}</span> 
+                              <span class="text-blue-600 font-semibold animate-pulse">Uploading...</span>`;
+
+        try {
+            const base64Image = await fileToBase64(file);
+
+            const formData = new FormData();
+            formData.append("image", base64Image); // ImgBB expects the base64 string under the 'image' key
+            
+            const url = `https://api.imgbb.com/1/upload?key=${IMGBB_API_KEY}`;
+            
+            const response = await fetch(url, {
+                method: 'POST',
+                body: formData,
+            });
+
+            if (!response.ok) {
+                const errorData = await response.json();
+                console.error("ImgBB API Error:", errorData);
+                throw new Error(`ImgBB upload failed: ${errorData.error.message || response.statusText}`);
+            }
+
+            const result = await response.json();
+            
+            if (result.success && result.data && result.data.url) {
+                statusEl.innerHTML = `<span class="font-semibold">${fileMapping.find(m => m.file === file).name}</span> 
+                                      <span class="text-green-600 font-semibold">✅ Uploaded!</span>`;
+                return result.data.url;
+            } else {
+                throw new Error("ImgBB response missing URL.");
+            }
+        } catch (error) {
+            console.error(`Error uploading image ${file.name}:`, error);
+            statusEl.innerHTML = `<span class="font-semibold">${fileMapping.find(m => m.file === file).name}</span> 
+                                  <span class="text-red-700 bg-red-100 px-2 rounded-md">❌ Upload Failed!</span>`;
+            // Re-throw to be caught by the main submission function
+            throw new Error("One or more image uploads failed.");
+        }
+    }
+
+    /**
+     * Main submission handler.
+     */
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        // 1. Disable button and show loading state
+        const originalButtonText = submitButton.textContent;
+        submitButton.textContent = "Processing... Please Wait";
+        submitButton.classList.add('opacity-70', 'cursor-not-allowed');
+        
+        // Hide previous messages
+        msg.classList.add('hidden');
+        msg.textContent = "";
+
+        // 2. Upload all mapped images sequentially
+        let uploadSuccess = true;
+        const filesToProcess = fileMapping.filter(m => m.file); // Only process files that were selected
+
+        const uploadPromises = filesToProcess.map(field => {
+            // Upload only if a file is attached to the mapping object
+            return uploadImageToImgBB(field.file, field.statusEl)
+                .then(url => {
+                    field.urlInput.value = url || '';
+                    return { success: true };
+                })
+                .catch(() => {
+                    uploadSuccess = false;
+                    return { success: false };
+                });
+        });
+
+        await Promise.all(uploadPromises);
+
+        if (!uploadSuccess) {
+            // If any upload failed, stop submission and reset button
+            submitButton.textContent = originalButtonText;
+            submitButton.classList.remove('opacity-70', 'cursor-not-allowed');
+
+            // Set error message 
+            msg.textContent = "Error: One or more images failed to upload. Please check the status messages above and try again.";
+            msg.classList.remove('hidden', 'bg-green-100', 'text-green-700');
+            msg.classList.add('bg-red-100', 'text-red-700', 'shadow-md');
+            return; // STOP EXECUTION
+        }
+
+
+        // 3. Prepare form data for Google Apps Script
+        const formData = new FormData(form);
+        const data = {};
+        for (const [key, value] of formData.entries()) {
+            data[key] = value;
+        }
+        
+        // Important: Ensure the hidden URL inputs are included in the final data object
+        // This is handled by FormData(form) but we re-validate here for clarity
+        data.brandLogoURL = document.getElementById('brandLogoURL').value;
+        data.profilePictureURL = document.getElementById('profilePictureURL').value;
+        data.exampleImageURL = document.getElementById('exampleImageURL').value;
+
+        // 4. Submit form data to Google Apps Script (with retry logic)
+        const maxRetries = 3;
+
+        async function fetchWithRetry() {
+            for (let attempt = 1; attempt <= maxRetries; attempt++) {
+                try {
+                    const response = await fetch(SCRIPT_URL, {
+                        method: 'POST',
+                        mode: 'cors',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                        },
+                        body: JSON.stringify(data)
+                    });
+
+                    if (response.ok) {
+                        // Success block
+                        submitButton.textContent = "Submitted Successfully!";
+                        submitButton.classList.add('bg-green-600', 'hover:bg-green-700');
+                        submitButton.classList.remove('bg-teal-600', 'hover:bg-teal-700', 'opacity-70', 'cursor-not-allowed');
+
+                        // Show success message
+                        msg.textContent = "Form submitted successfully! Thank you for providing the details."; 
+                        msg.classList.remove('hidden', 'bg-red-100', 'text-red-700');
+                        msg.classList.add('bg-green-100', 'text-green-700', 'shadow-md');
+
+                        form.reset(); // Clear the form after success
+                        
+                        // Clear image status messages and data
+                        resetImageStatus();
+                        
+                        // Revert button text and style after 5 seconds
+                        setTimeout(() => {
+                            msg.classList.add('hidden');
+                            submitButton.textContent = originalButtonText;
+                            submitButton.classList.add('bg-teal-600', 'hover:bg-teal-700');
+                            submitButton.classList.remove('bg-green-600', 'hover:bg-green-700');
+                        }, 5000);
+                        return;
+
+                    } else {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+
+                } catch (err) {
+                    console.error(`Attempt ${attempt} failed:`, err);
+                    if (attempt < maxRetries) {
+                        // Wait for 2^attempt seconds before retrying
+                        await new Promise(resolve => setTimeout(resolve, Math.pow(2, attempt) * 1000));
+                    } else {
+                        // All attempts failed
+                        submitButton.textContent = originalButtonText;
+                        submitButton.classList.remove('opacity-70', 'cursor-not-allowed');
+                        submitButton.classList.add('bg-teal-600', 'hover:bg-teal-700');
+                        
+                        // Show error message in the UI
+                        msg.textContent = "Error submitting form after all retries. Please check your Script URL and try again.";
+                        msg.classList.remove('hidden', 'bg-green-100', 'text-green-700');
+                        msg.classList.add('bg-red-100', 'text-red-700', 'shadow-md');
+                        console.error("Final form submission failed after retries.");
+                    }
+                }
+            }
+        }
+
+        fetchWithRetry();
+    });
+</script>
+
+</body>
+</html>

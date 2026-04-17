@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Desinix App | Experience Design on the Go</title>
+    
+    <!-- Standard SEO Meta Tags -->
+    <meta name="description" content="Download the Desinix official Android app to manage your website and poster projects directly from your mobile device. Fast, secure, and built for impact.">
+    <meta name="author" content="Desinix">
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #14b8a6 100%);
+        }
+        /* Animation for the download button */
+        @keyframes bounce-subtle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        .animate-bounce-subtle {
+            animation: bounce-subtle 2s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header (Same as Index) -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="https://desinix.co.in/" class="text-2xl font-extrabold text-teal-600 hover:text-teal-700 transition duration-300">
+                    Desin<span class="text-gray-900">ix</span>
+                </a>
+                <nav id="desktop-menu" class="hidden md:flex space-x-8">
+                    <a href="https://desinix.co.in" class="text-gray-600 hover:text-teal-600 font-medium transition duration-300">Home</a>
+                    <a href="https://desinix.co.in#websites" class="text-gray-600 hover:text-teal-600 font-medium transition duration-300">Websites</a>
+                    <a href="https://desinix.co.in#posters" class="text-gray-600 hover:text-teal-600 font-medium transition duration-300">Posters</a>
+                    <a href="https://desinix.co.in/contact/" class="text-gray-600 hover:text-teal-600 font-medium transition duration-300">Contact</a>
+                    <a href="https://desinix.co.in/about/" class="text-gray-600 hover:text-teal-600 font-medium transition duration-300">AboutUs</a>
+                    <!--a href="#" class="text-teal-600 font-bold transition duration-300">Download APP</a-->
+                </nav>
+                <a href="https://desinix.co.in/contact/#contact-form" class="hidden md:inline-flex px-4 py-2 text-sm font-semibold text-white bg-teal-600 rounded-full shadow-lg hover:bg-teal-700 transition duration-300 transform hover:scale-105">
+                    Start Your Project
+                </a>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-teal-600 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="https://desinix.co.in/#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50 transition duration-300">Home</a>
+                <a href="https://desinix.co.in/#websites" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50 transition duration-300">Websites</a>
+                <a href="https://desinix.co.in/#posters" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50 transition duration-300">Posters</a>
+                <a href="https://desinix.co.in/#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50 transition duration-300">Contact</a>
+                <a href="https://desinix.co.in/about/" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50 transition duration-300">AboutUs</a>
+                <!--a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-teal-600 bg-gray-50 transition duration-300">Download APP</a-->
+            </div>
+        </div>
+    </header>
+
+    <!-- Download Hero Section -->
+    <section class="hero-bg py-24 sm:py-32 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="mb-8 inline-block p-3 bg-teal-500/20 rounded-2xl backdrop-blur-sm">
+                <svg class="w-16 h-16 text-yellow-300 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                </svg>
+            </div>
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6">
+                Desinix chatting in Your <span class="text-yellow-300">Pocket</span>
+            </h1>
+            <p class="text-xl sm:text-2xl text-teal-100 max-w-2xl mx-auto mb-10">
+                Get the official Dchat Android application. Experience New World of Chatting
+            </p>
+            
+            <!-- Android App Download Button -->
+          <div class="flex flex-col items-center gap-4">
+            <a href="app-release.apk" download="dchat-app.apk"
+               class="animate-bounce-subtle inline-flex items-center justify-center px-10 py-5 border border-transparent text-lg font-bold rounded-full shadow-2xl text-gray-900 bg-yellow-300 hover:bg-yellow-400 transition duration-300 transform hover:scale-105">
+                      <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17.523 15.3414C17.0211 15.3414 16.6144 14.9347 16.6144 14.4328C16.6144 13.9308 17.0211 13.5242 17.523 13.5242C18.025 13.5242 18.4317 13.9308 18.4317 14.4328C18.4317 14.9347 18.025 15.3414 17.523 15.3414ZM6.47702 15.3414C5.97505 15.3414 5.56836 14.9347 5.56836 14.4328C5.56836 13.9308 5.97505 13.5242 6.47702 13.5242C6.97899 13.5242 7.38568 13.9308 7.38568 14.4328C7.38568 14.9347 6.97899 15.3414 6.47702 15.3414ZM17.8574 11.2065L19.9575 7.57002C20.103 7.31806 20.0163 6.99507 19.7643 6.84956C19.5123 6.70405 19.1893 6.79074 19.0438 7.04271L16.8837 10.7839C15.4673 10.1347 13.8065 9.77344 12 9.77344C10.1935 9.77344 8.53272 10.1347 7.11627 10.7839L4.95622 7.04271C4.81071 6.79074 4.48773 6.70405 4.23576 6.84956C3.98379 6.99507 3.8971 7.31806 4.0426 7.57002L6.14264 11.2065C3.39174 12.6953 1.54718 15.5415 1.45523 18.8413H22.5448C22.4528 15.5415 20.6083 12.6953 17.8574 11.2065Z"/>
+                    </svg>
+               android app download
+            </a>
+            <p class="text-sm text-teal-200 mt-2">Latest Version: 10.1.0 | Size: 12MB</p>
+        </div>
+        </div>               
+    </section>
+
+    <!-- Installation Steps -->
+    <section class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold text-gray-900">How to Install</h2>
+                <p class="mt-4 text-xl text-gray-600">Quick steps to get started with our mobile app.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">1</div>
+                    <h3 class="text-xl font-bold mb-3">Download APK</h3>
+                    <p class="text-gray-600">Click the button above to start downloading the Desinix Chatting app file.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">2</div>
+                    <h3 class="text-xl font-bold mb-3">Enable Unknown Sources</h3>
+                    <p class="text-gray-600">Allow installation from your browser or file manager in your phone settings.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">3</div>
+                    <h3 class="text-xl font-bold mb-3">Install & Open</h3>
+                    <p class="text-gray-600">Tap the downloaded file and follow the prompts to complete setup.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as Index) -->
+    <footer class="bg-gray-900 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-gray-400">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-xl font-bold text-white mb-4">Desinix</h4>
+                    <p class="text-sm">Crafting digital and physical brand experiences.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="hover:text-teal-500 transition duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.28 2.76 7.91 6.567 9.172V14.77h-2.14V12h2.14V9.894c0-2.112 1.287-3.275 3.197-3.275 0.908 0 1.688 0.067 1.916 0.098v2.246h-1.33c-1.05 0-1.256 0.499-1.256 1.234V12h2.502l-0.327 2.77h-2.175v6.402C19.24 19.91 22 16.28 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                        </a>
+                        <a href="#" class="hover:text-teal-500 transition duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-8 7l-8 8V6l8 8 8-8v12l-8-8z"/></svg>
+                        </a>
+                        <a href="#" class="hover:text-teal-500 transition duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.5 14.5c-.21 0-.41-.03-.6-.1-.28-.09-.58-.16-.83-.28-.27-.13-.56-.25-.85-.36-.28-.11-.58-.2-.88-.27-.3-.07-.6-.1-.9-.1-.32 0-.64.03-.94.1-.3.07-.6.16-.9.27-.3.11-.6.23-.87.36-.27.12-.57.19-.85.28-.19.07-.39.1-.6.1-.28 0-.55-.07-.8-.2-.25-.13-.48-.31-.66-.54-.18-.23-.33-.5-.43-.8s-.17-.67-.17-1.06c0-.44.11-.84.34-1.2.23-.36.56-.67.97-.93.41-.26.9-.45 1.45-.58.55-.13 1.17-.2 1.85-.2.69 0 1.31.07 1.85.2.55.13 1.04.32 1.45.58.41.26.74.57.97.93.23.36.34.76.34 1.2 0 .39-.06.77-.17 1.06-.1.3-.25.57-.43.8-.18.23-.41.41-.66.54-.25.13-.52.2-.8.2z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://desinix.co.in/index.html#websites" class="hover:text-teal-500 transition duration-300">Website Services</a></li>
+                        <li><a href="https://desinix.co.in/index.html#posters" class="hover:text-teal-500 transition duration-300">Poster Printing</a></li>
+                        <li><a href="https://desinix.co.in/index.html#contact" class="hover:text-teal-500 transition duration-300">Request a Quote</a></li>
+                        <li><a href="#" class="hover:text-teal-500 transition duration-300">Design Portfolio</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://desinix.co.in/design-blog/" class="hover:text-teal-500 transition duration-300">Design Blog</a></li>
+                        <li><a href="https://desinix.co.in/pricing-guide/" class="hover:text-teal-500 transition duration-300">Pricing Guide</a></li>
+                        <li><a href="https://desinix.co.in/support-center/" class="hover:text-teal-500 transition duration-300">Support Center</a></li>
+                        <li><a href="https://desinix.co.in/terms-of-service/" class="hover:text-teal-500 transition duration-300">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Stay Updated</h4>
+                    <p class="text-sm mb-4">Subscribe for design tips and exclusive offers.</p>
+                    <form onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+                        <input type="email" placeholder="Your Email" class="w-full px-4 py-2 rounded-lg text-gray-900 focus:ring-teal-500 focus:border-teal-500 mb-3" required>
+                        <button type="submit" class="w-full px-4 py-2 bg-teal-600 text-white font-semibold rounded-lg hover:bg-teal-700 transition duration-300">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="mt-12 border-t border-gray-700 pt-8 text-center text-sm">
+                &copy; 2026 Desinix. All rights reserved. Built with passion.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        const button = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+
+        if (button && menu) {
+            button.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>
